@@ -6,7 +6,7 @@ type LayoutProps = React.PropsWithChildren;
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <div>{children}</div>
     </div>
   );
