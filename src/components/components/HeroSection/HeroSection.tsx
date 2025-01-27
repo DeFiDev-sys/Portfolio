@@ -6,7 +6,6 @@ import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
 import { NeonGradientCard } from "@/components/ui/neon-gradient-card";
-// import { BorderBeam } from "@/components/ui/border-beam";
 
 const HeroSection: React.FC = () => {
   const Links = [
@@ -36,13 +35,6 @@ const HeroSection: React.FC = () => {
           scale: 1,
         }}
         className='flex justify-center items-center  mx-auto my-10  w-fit rounded-full'>
-        {/* <BorderBeam
-          size={250}
-          borderWidth={1.2}
-          duration={12}
-          delay={9}
-          className='shadow-xl'
-        /> */}
         <NeonGradientCard className='max-w-sm'>
           <Image
             src={"/ProfilePic.png"}
