@@ -5,7 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
-import { BorderBeam } from "@/components/ui/border-beam";
+import { NeonGradientCard } from "@/components/ui/neon-gradient-card";
+// import { BorderBeam } from "@/components/ui/border-beam";
 
 const HeroSection: React.FC = () => {
   const Links = [
@@ -24,7 +25,7 @@ const HeroSection: React.FC = () => {
   ];
 
   return (
-    <main className='font-poppins space-y-10 overflow-x-hidden'>
+    <main className='font-poppins space-y-20 overflow-hidden h-full '>
       <motion.div
         initial={{
           opacity: 0,
@@ -34,15 +35,23 @@ const HeroSection: React.FC = () => {
           opacity: 1,
           scale: 1,
         }}
-        className='flex justify-center items-center relative  mx-auto my-10 w-fit rounded-full'>
-        <BorderBeam size={250} duration={12} delay={9} />
-        <Image
-          src={"/ProfilePic.png"}
-          width={150}
-          height={150}
-          alt={"Profile Picture"}
-          className='object-cover'
-        />
+        className='flex justify-center items-center  mx-auto my-10  w-fit rounded-full'>
+        {/* <BorderBeam
+          size={250}
+          borderWidth={1.2}
+          duration={12}
+          delay={9}
+          className='shadow-xl'
+        /> */}
+        <NeonGradientCard className='max-w-sm'>
+          <Image
+            src={"/ProfilePic.png"}
+            width={150}
+            height={150}
+            alt={"Profile Picture"}
+            className='object-cover'
+          />
+        </NeonGradientCard>
       </motion.div>
       <div className='flex flex-col items-center space-y-20 xl:justify-between xl:flex-row'>
         <div className=' my-auto border-l-8 border-slate-300 p-5'>
@@ -68,7 +77,7 @@ const HeroSection: React.FC = () => {
           </motion.div>
         </div>
 
-        <div className='xl:space-y-20 flex space-x-10 xl:space-x-0 xl:flex-col'>
+        <div className='xl:space-y-12 flex space-x-10 xl:space-x-0 xl:flex-col'>
           {Links.map((link, i) => (
             <motion.div
               initial={{
